@@ -1,9 +1,9 @@
 const express = require("express");
 const notes = require("./data/notes");
+const dotenv = require("dotenv");
 
 const app = express();
-
-app.listen(5000, console.log("Server Started on PORT 5000"));
+dotenv.config();
 
 app.get("/", (req, res) => {
   res.send("API is running...");
@@ -17,3 +17,7 @@ app.get("/api/notes/:id/", (req, res) => {
   const note = notes.find((n) => n._id === req.params.id);
   res.send(note);
 });
+
+const PORT = process.env.PORT || 4000; //if that port is not available then 4000
+
+app.listen(PORT, console.log(`Server Started on PORT ${PORT}`));
