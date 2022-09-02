@@ -8,7 +8,7 @@ const App = () => (
   <BrowserRouter>
     <Header />
     <main>
-      <Route path="/" component={LandingPage} />
+      <Route path="/" component={LandingPage} exact />
     </main>
     <Footer />
   </BrowserRouter>
