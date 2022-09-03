@@ -1,7 +1,8 @@
 import React from "react";
+import MainScreen from "../../components/MainScreen/MainScreen";
 
 const MyNotes = () => {
-  return <div>MyNotes</div>;
+  return <MainScreen title="Welcome back Ayyasudeen...">MyNotes</MainScreen>;
 };
 
 export default MyNotes;
